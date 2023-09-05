@@ -1,0 +1,101 @@
+@import 'variaveis.scss';
+
+.historySection{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: $black;
+    border-radius: 10px 10px 0px 0px ;
+    margin-top: -10px;
+
+    h1{
+        font-family: $pacifico;
+        color: $color-first;
+        font-size: 1.1em;
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    #slicePizza1{
+        width: 80px;
+        position:absolute;
+        top: 200px;
+        left: -10px;
+        transform: rotate(340deg);
+    }
+    #slicePizza2{
+        width: 80px;
+        position:absolute;
+        top: 350px;
+        right: 10px;
+        transform: rotate(100deg);
+     
+    }
+    #slicePizza3{
+        width: 80px;
+        position:absolute;
+        left: -10px;
+        top: 550px;
+        transform: rotate(340deg);
+      
+
+    }
+   
+    .containerHistory:nth-child(2n-1){
+        text-align: right;
+        margin-left: 130px;
+    }
+    .containerHistory{
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      margin-left: 20px;
+      margin-top: 50px;
+      gap: 1.1em;
+      width: 100%;
+
+      
+      img{
+        border-radius: 50%;
+      }
+         p{
+            font-family: $raleway;
+            width: 180px;
+            color: $white;
+          
+            
+         }
+        span{
+            color: $color-first;
+        }
+    }
+    .historia{
+        margin-top: 100px;
+        margin-bottom: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+
+        h2{
+            @extend h1
+            
+        }
+
+        p{
+            width: 85%;
+           text-align: center;
+           color: $white;
+           font-size: 1em;
+           font-family: $raleway;
+           margin-top: 20px;
+           line-height: 25px;
+        }
+    }
+}
+
+.reveal{
+    visibility: hidden;
+}

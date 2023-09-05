@@ -1,3 +1,3 @@
  ScrollReveal({reset:true});
 
- ScrollReveal().reveal('.revael', {durantion:1000});
+ ScrollReveal().reveal('.reveal', {delay:200});
