@@ -6,10 +6,6 @@
   box-sizing: border-box;
 }
 
-body {
-  margin-bottom: 1500px;
-}
-
 .lines {
   position: fixed;
   right: 5px;
@@ -45,13 +41,14 @@ header .container {
   width: 100%;
 }
 header .container .logo {
-  width: 80px;
+  width: 100px;
   padding: 10px;
 }
 header .container nav {
   display: flex;
   align-items: center;
   margin-right: 30px;
+  margin-top: -10px;
 }
 header .container nav ul {
   list-style: none;
@@ -110,7 +107,7 @@ article span {
 }
 
 .historySection {
-  position: absolute;
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -126,49 +123,61 @@ article span {
   padding-top: 20px;
 }
 .historySection #slicePizza1 {
-  width: 80px;
+  width: 60px;
   position: absolute;
-  top: 200px;
-  left: -10px;
+  top: 20px;
+  left: 20px;
   transform: rotate(340deg);
 }
 .historySection #slicePizza2 {
-  width: 80px;
+  width: 60px;
   position: absolute;
-  top: 350px;
-  right: 10px;
-  transform: rotate(100deg);
+  top: 400px;
+  right: 20px;
+  z-index: 10;
+  transform: rotate(90deg);
 }
 .historySection #slicePizza3 {
-  width: 80px;
+  width: 60px;
   position: absolute;
-  left: -10px;
+  left: 20px;
   top: 550px;
+  z-index: 10;
   transform: rotate(340deg);
 }
-.historySection .containerHistory:nth-child(2n-1) {
-  text-align: right;
-  margin-left: 130px;
+.historySection #slicePizza4 {
+  width: 80px;
+  position: absolute;
+  bottom: -50px;
+  z-index: 10;
+  transform: rotate(40deg);
 }
 .historySection .containerHistory {
   display: flex;
   align-items: center;
-  justify-content: left;
-  margin-left: 20px;
-  margin-top: 50px;
-  gap: 1.1em;
+  flex-direction: column;
+  gap: 2.2em;
   width: 100%;
+  margin-top: 60px;
+  padding: 10px;
+}
+.historySection .containerHistory > div:nth-child(2n) {
+  justify-content: right;
+}
+.historySection .containerHistory div {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 1em;
+  width: 90%;
 }
 .historySection .containerHistory img {
   border-radius: 50%;
 }
 .historySection .containerHistory p {
   font-family: "Raleway", sans-serif;
-  width: 180px;
+  width: 50%;
   color: #FFFFFF;
-}
-.historySection .containerHistory span {
-  color: #F28705;
 }
 .historySection .historia {
   margin-top: 100px;
@@ -189,8 +198,177 @@ article span {
   line-height: 25px;
 }
 
+.menuSection {
+  width: 100%;
+}
+.menuSection .pizza, .menuSection .vinhos {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  overflow-x: scroll;
+  padding: 10px;
+  width: 100%;
+}
+.menuSection .pizza::-webkit-scrollbar, .menuSection .vinhos::-webkit-scrollbar {
+  width: 8px;
+  height: 12px;
+}
+.menuSection .pizza::-webkit-scrollbar-thumb, .menuSection .vinhos::-webkit-scrollbar-thumb {
+  background-color: #D93D04;
+  border-radius: 20px;
+}
+.menuSection .pizza::-webkit-scrollbar-track, .menuSection .vinhos::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.082);
+}
+.menuSection .pizza ul, .menuSection .vinhos ul {
+  display: flex;
+  flex-direction: row;
+  gap: 1.2em;
+  list-style: none;
+  padding: 10px;
+}
+.menuSection .pizza ul p, .menuSection .vinhos ul p {
+  margin-top: -10px;
+}
+.menuSection .pizza ul img, .menuSection .vinhos ul img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition-duration: 0.8s;
+}
+.menuSection .pizza ul img:hover, .menuSection .vinhos ul img:hover {
+  width: 120px;
+  height: 120px;
+}
+.menuSection h1, .menuSection .historySection .historia h2, .historySection .historia .menuSection h2 {
+  font-family: "Raleway", sans-serif;
+  color: #181818;
+  font-size: 1.1em;
+  font-weight: 600;
+  text-align: center;
+  margin: 40px 20px auto auto;
+}
+.menuSection a {
+  display: block;
+  text-align: center;
+  margin: auto;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #FFFFFF;
+  background-color: #D93D04;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.2em;
+  width: 80%;
+}
+.menuSection p {
+  color: #181818;
+  font-family: "Pacifico", cursive;
+  font-size: 1.1em;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.contatoSection {
+  position: relative;
+  margin-top: 100px;
+  border-radius: 10px 10px 0 0;
+  background-color: #181818;
+}
+.contatoSection div {
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  gap: 2em;
+  width: 200px;
+  margin-left: 50px;
+  padding-bottom: 50px;
+}
+.contatoSection div a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 0.8em;
+  font-size: 1.2em;
+  font-family: "Raleway", sans-serif;
+  color: #FFFFFF;
+}
+.contatoSection div a i {
+  color: #D93D04;
+  font-size: 2em;
+}
+.contatoSection h1, .contatoSection .historySection .historia h2, .historySection .historia .contatoSection h2 {
+  text-align: center;
+  color: #F28705;
+  font-family: "Pacifico", cursive;
+  font-size: 1.4em;
+  padding: 20px;
+}
+.contatoSection img {
+  position: absolute;
+  bottom: -40px;
+  left: -20px;
+}
+
+.bon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+}
+.bon img {
+  width: 80%;
+}
+
+footer {
+  background-color: #181818;
+  margin-top: 50px;
+  width: 100%;
+}
+footer p {
+  color: #FFFFFF;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-size: 0.8em;
+  padding-bottom: 10px;
+}
+footer .containerFooter {
+  display: flex;
+  align-items: center;
+  padding-top: 20px;
+  width: 90%;
+  margin: auto;
+}
+footer .containerFooter h1, footer .containerFooter .historySection .historia h2, .historySection .historia footer .containerFooter h2 {
+  padding: 20px;
+  color: #FFFFFF;
+  font-family: "Raleway", sans-serif;
+  font-size: 1em;
+  font-weight: normal;
+  width: 70%;
+}
+footer .containerFooter a {
+  display: block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #FFFFFF;
+  background-color: #D93D04;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-size: 0.8em;
+}
+
 .reveal {
   visibility: hidden;
+}
+
+span {
+  color: #F28705;
 }
 
 /*# sourceMappingURL=style.css.map */
