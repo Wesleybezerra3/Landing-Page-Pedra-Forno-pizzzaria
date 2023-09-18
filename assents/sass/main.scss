@@ -20,25 +20,25 @@
   #slicePizza1 {
     width: 60px;
     position: absolute;
-    top: 20px;
-    left: 20px;
-    transform: rotate(340deg);
+    top: 200px;
+    left: 0px;
+  
   }
   #slicePizza2 {
     width: 60px;
     position: absolute;
-    top: 400px;
-    right: 20px;
+    top: 350px;
+    right: 10px;
     z-index: 10;
     transform: rotate(90deg);
   }
   #slicePizza3 {
     width: 60px;
     position: absolute;
-    left: 20px;
+    left: opx;
     top: 550px;
     z-index: 10;
-    transform: rotate(340deg);
+    
   }
   #slicePizza4 {
     width: 80px;
@@ -52,7 +52,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 2.2em;
+    gap: 3em;
     width: 100%;
     margin-top: 60px;
     padding: 10px;

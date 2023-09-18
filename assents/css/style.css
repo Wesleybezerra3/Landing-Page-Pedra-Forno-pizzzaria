@@ -117,36 +117,31 @@ article span {
 }
 .historySection h1, .historySection .historia h2 {
   font-family: "Pacifico", cursive;
-  color: #D93D04;
+  color: #F28705;
   font-size: 1.1em;
-  width:90%;
-  margin: auto;
-  z-index: 10;
   text-align: center;
   padding-top: 20px;
 }
 .historySection #slicePizza1 {
   width: 60px;
   position: absolute;
-  top: 20px;
-  left: 20px;
-  transform: rotate(340deg);
+  top: 200px;
+  left: 0px;
 }
 .historySection #slicePizza2 {
   width: 60px;
   position: absolute;
-  top: 400px;
-  right: 20px;
+  top: 350px;
+  right: 10px;
   z-index: 10;
   transform: rotate(90deg);
 }
 .historySection #slicePizza3 {
   width: 60px;
   position: absolute;
-  left: 20px;
+  left: opx;
   top: 550px;
   z-index: 10;
-  transform: rotate(340deg);
 }
 .historySection #slicePizza4 {
   width: 80px;
@@ -159,7 +154,7 @@ article span {
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 2.2em;
+  gap: 3em;
   width: 100%;
   margin-top: 60px;
   padding: 10px;
